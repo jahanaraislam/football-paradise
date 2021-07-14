@@ -1,4 +1,237 @@
+/* font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+/* globally style */
 .body{
     font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #f6f6f6;
+    color:#ffffff;
+    box-sizing: border-box;    
 }
+.container{
+    width:80%;
+    margin: auto;
+    overflow: hidden;
+    margin-top:90px;
+    margin-bottom:90px;
+}
+/* top banner -container styles-start */
+.top-banner-container{
+    background-color:rgb(224, 144, 118);
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+ .banner-title{
+    margin-top: 207px;
+    margin-left: 156px;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 80px;
+    color:white;
+    width:485px;
+    height:230px;
+}
+.banner-button{
+    width: 168px;
+    height: 44px;
+    margin-left: 156px;
+    background-color:#E02C6D;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 24px;
+    transition: transform 0.5s ease-in;
+} 
+a{
+    text-decoration: none;
+    color:white;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+.banner-right{ 
+    margin-top:153px;
+    margin-bottom: 70px;
+}
+.top-banner-container:hover > .banner-left .banner-button{
+    transform: translate(-50px, -470px);
+}
+.banner-right img{
+    width:80%;
+}
+/* top banner -container styles-end*/
+/* players styles start */
+.players{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;  
+}
+.player{
+    background-color: #ffffff;
+    color:black;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 330px;
+    height: 610px; 
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15); 
+    border-radius: 5px; 
+    margin-bottom: 25px;   
+}
+.photo-detail {
+    width: 300px;
+    height: 290px;
+    margin-bottom:30px;    
+}
+.photo img{
+    width: 300px;
+    height: 256px;
+    margin: 15px ;
+    padding: 0px;
+    border-radius: 5px;
+}
+.photo-detail h1{
+     text-align: justify;
+     font-weight: 900;
+     font-size: 28px;
+     line-height: 40px;
+     color: #18191F;
+}
+.photo-detail p{
+    color: #6C6C6C;
+    font-size: 16px;
+}
+/* players styles end */
+/* gallery style start */
+.gallery h1{
+    font-weight: bold;
+    font-size: 64px;
+    color:rgb(224, 144, 118);
+    text-align: center;
+    letter-spacing: 2.5px;
+}
+.gallery-img{
+    background-color: #ffffff;
+    color:black;
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.15); 
+    border-radius: 5px;    
+}
+.gallery-img img{
+    width: 300px;
+    height: 256px;
+    margin: 5px ;
+    padding: 0px;
+    border-radius: 5px;
+}
+ /* gallery style end */
+ /* login start */
+ .login-container{
+    display: flex;
+    justify-content: center;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+}
+.login-form input,
+button{
+    font-size: 1.3em;
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 7px;
+}
+.login-form h2{
+    font-size: 50px;
+    color:rgb(224, 144, 118);
+    text-align: center;
+    letter-spacing: 2.5px;
+}
+.login-form button{
+    background-color: rgb(224, 144, 118);
+    color:whitesmoke;
+    font-weight: 700;
+    padding: 7px;
+    border:none;
+}
+/* login end */
+/* footer start */
+.footer-container{
+    width: 35%;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 120px;
+    margin-bottom: 90px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+.footer-img img{
+    width:100%;
+}
+.footer-copyright p{
+    color: #585656;
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 40px;
+    text-align:center;
+}
+.fab{
+    color:#948c8c;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 20px;
+    margin-right: 20px;
+    background-color:rgb(236, 228, 228)
+}
+.footer-icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 35px;
+    margin-left: 111px;
+    width: 300px;
+    height: 32px;
+}
+/* footer  end */
+/* responsive start */
+/* mobile device */
+@media only screen and (max-width:688px) {
+.container{
+        width:100%;
+}
+.top-banner-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+.banner-title{
+    width: 300px;
+    height:230px;
+    margin-bottom: 140px;
+}
+.banner-title, .banner-button{
+     margin-left: 10px;
+}
+
+.players{
+     display: grid;
+     grid-template-columns: repeat(1, 1fr);
+}
+.gallery-img{
+     display: grid;
+     grid-template-columns: repeat(1, 1fr);
+}
+.footer-container{
+    width:100%;
+}
+
+}
+
+
+
+
